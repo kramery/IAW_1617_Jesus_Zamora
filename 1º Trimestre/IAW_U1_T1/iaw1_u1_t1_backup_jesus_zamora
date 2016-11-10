@@ -1,0 +1,42 @@
+--
+-- MySQL 5.5.5
+-- Sun, 25 Sep 2016 12:16:26 +0000
+--
+
+CREATE DATABASE `spa` DEFAULT CHARSET latin1;
+
+USE `spa`;
+
+CREATE TABLE `habitacion` (
+   `numero` varchar(50) not null,
+   `color` varchar(50),
+   PRIMARY KEY (`numero`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- [La tabla `habitacion` esta vacía]
+
+CREATE TABLE `personal` (
+   `id` int(5) not null,
+   `edad` varchar(50),
+   `ciudad` varchar(50),
+   `poblacion` varchar(50),
+   `altura` varchar(50),
+   `numero` varchar(50),
+   PRIMARY KEY (`id`),
+   KEY `numero` (`numero`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- [La tabla `personal` esta vacía]
+
+CREATE TABLE `producto` (
+   `numero` varchar(50),
+   `color` varchar(50),
+   KEY `numero` (`numero`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `producto` (`numero`, `color`) VALUES 
+('', '1'),
+('', '2'),
+('', '3'),
+('', '4'),
+('', '5');
